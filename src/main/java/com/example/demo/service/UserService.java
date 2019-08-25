@@ -12,9 +12,8 @@ public class UserService {
     private final Map<String, User> data = new ConcurrentHashMap<>();
 
     public UserService(){
-        this.data.put("E001",new User("E001","Wesley","java"));
+        this.data.put("1",new User("E001","Wesley",26));
     }
-
 
     public Flux<User> list() {
         return Flux.fromIterable(this.data.values());

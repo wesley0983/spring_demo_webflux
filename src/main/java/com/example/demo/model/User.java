@@ -10,12 +10,12 @@ public class User {
     /**
      * 描述
      */
-    private String desc;
+    private Integer age;
 
     public User() {
     }
 
-    public User(String id, String name, String desc) {
+    public User(String id, String name, Integer desc) {
         this.id = id;
         this.name = name;
         this.desc = desc;
@@ -37,11 +37,11 @@ public class User {
         this.name = name;
     }
 
-    public String getDesc() {
+    public Integer getDesc() {
         return desc;
     }
 
-    public void setDesc(String desc) {
+    public void setDesc(Integer desc) {
         this.desc = desc;
     }
 }

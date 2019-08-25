@@ -20,8 +20,9 @@ public class UserController {
     @GetMapping("/user")
     public Mono<User> getUser() {
         User user = new User();
+        user.setId("01");
         user.setName("犬小哈");
-        user.setDesc("欢迎关注我的公众号: 小哈学Java");
+        user.setDesc(25);
         return Mono.just(user);
     }
 
