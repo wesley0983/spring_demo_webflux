@@ -17,12 +17,18 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @GetMapping("/test")
+    public Flux<String> test(){
+        Flux.just("hello").subscribe(System.out::println);
+        return Flux.just("word");
+    }
+
     @GetMapping("/user")
     public Mono<User> getUser() {
         User user = new User();
         user.setId("01");
         user.setName("犬小哈");
-        user.setDesc(25);
+        user.setAge(25);
         return Mono.just(user);
     }
 
@@ -53,4 +59,5 @@ public class UserController {
     public Mono<User>  delete(@PathVariable("id") final String id) {
         return this.userService.delete(id);
     }
+
 }

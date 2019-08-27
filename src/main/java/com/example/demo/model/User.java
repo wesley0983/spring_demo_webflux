@@ -15,10 +15,10 @@ public class User {
     public User() {
     }
 
-    public User(String id, String name, Integer desc) {
+    public User(String id, String name, Integer age) {
         this.id = id;
         this.name = name;
-        this.desc = desc;
+        this.age = age;
     }
 
     public String getId() {
@@ -37,11 +37,11 @@ public class User {
         this.name = name;
     }
 
-    public Integer getDesc() {
-        return desc;
+    public Integer getAge() {
+        return age;
     }
 
-    public void setDesc(Integer desc) {
-        this.desc = desc;
+    public void setAge(Integer age) {
+        this.age = age;
     }
 }
